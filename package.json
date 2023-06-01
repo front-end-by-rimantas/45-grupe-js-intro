@@ -5,6 +5,7 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
+        "function": "nodemon ./js/06-function.js",
         "import": "nodemon ./js/05-import.js",
         "boolean": "nodemon ./js/04-boolean.js",
         "string": "nodemon ./js/03-string.js",
