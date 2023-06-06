@@ -8,10 +8,10 @@ Teigiami/neigiami
 Mistiniai: Begalybes ir NaN (not-a-number)
 
 Aritmetiniai operatoriai:
-+, -, *, /, **, ++, --
++, -, *, /, **, ++, --, %
 
 Priskirimo operatoriai:
-=, +=, -=, *=, /=, **=
+=, +=, -=, *=, /=, **=, %=
 
 Salia matematikos:
 (, )
@@ -258,3 +258,10 @@ const p5 = 6;
 const vidurkis = (p1 + p2 + p3 + p4 + p5) / 5;
 console.log(vidurkis);
 
+console.clear();
+
+console.log(10 / 5);
+console.log(10 % 5);
+
+console.log(11 / 5);
+console.log(11 % 5);
