@@ -5,6 +5,8 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
+        "multiply": "nodemon ./mini/multiply.js",
+        "typeof": "nodemon ./js/10-typeof.js",
         "for": "nodemon ./js/09-for.js",
         "if": "nodemon ./js/08-if.js",
         "array": "nodemon ./js/07-array.js",
