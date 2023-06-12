@@ -14,7 +14,7 @@ function letters(str, step) {
     if (step > str.length) {
         return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį.';
     }
-    if (step <= 0) {
+    if (step === 0) {
         return 'Antrasis kintamasis turi būti didesnis už nulį.';
     }
     if (step % 1 !== 0) {
@@ -23,8 +23,14 @@ function letters(str, step) {
 
     let shortText = '';
 
-    for (let i = step - 1; i < str.length; i += step) {
-        shortText += str[i];
+    if (step > 0) {
+        for (let i = step - 1; i < str.length; i += step) {
+            shortText += str[i];
+        }
+    } else {
+        for (let i = str.length + step; i >= 0; i += step) {
+            shortText += str[i];
+        }
     }
 
     return shortText;
@@ -68,10 +74,9 @@ console.log(letters('abcdefghijkl', 4), '->', 'dhl');
 console.log(letters('abcdefghijkl', 5), '->', 'ej');
 console.log(letters('abcdefghijkl', 6), '->', 'fl');
 
-// console.log(letters('abcdefg', -1), '->', '...');
-// console.log(letters('abcdefg', -2), '->', '...');
-// console.log(letters('abcdefghijkl', -3), '->', '...');
-// console.log(letters('abcdefghijkl', -4), '->', '...');
-// console.log(letters('abcdefghijkl', -5), '->', '...');
-// console.log(letters('abcdefghijkl', -6), '->', '...');
-
+console.log(letters('abcdefg', -1), '->', 'gfedcba');
+console.log(letters('abcdefg', -2), '->', 'fdb');
+console.log(letters('abcdefghijkl', -3), '->', 'jgda');
+console.log(letters('abcdefghijkl', -4), '->', 'iea');
+console.log(letters('abcdefghijkl', -5), '->', 'hc');
+console.log(letters('abcdefghijkl', -6), '->', 'ga');
