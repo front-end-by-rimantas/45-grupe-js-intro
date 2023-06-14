@@ -1,3 +1,21 @@
+/*
+Kuriuos butina moketi:
+- at
+- flat
+- includes
+- indexOf
+- join
+- push
+- reverse
+- slice
+
+- filter
+- forEach
+- map
+- reduce
+- sort
+*/
+
 console.clear();
 
 function includes(list, needle) {
@@ -98,3 +116,52 @@ Number.prototype.length = function length() {
 console.log((5).length(), '->', 1)
 console.log((12).length(), '->', 2)
 console.log((9999).length(), '->', 4)
+
+console.clear();
+
+const double = [
+    5,
+    4,
+    [7, [8, 88, 88], 9],
+    3,
+    [1, 2],
+    0,
+];
+console.log(double.flat());
+console.log(double.flat().flat());
+console.log(double.flat(2));
+
+console.clear();
+
+const masyvas = [10, 2, 8, 4, 6];
+
+console.log(masyvas.at(1));
+console.log(masyvas.at(-1));
+
+console.log(masyvas.join());
+console.log(masyvas.join('-'));
+console.log(masyvas.join(' '));
+console.log(masyvas.join(' -==- '));
+
+const last1 = masyvas.push(10);
+console.log(masyvas, last1);
+
+const last2 = masyvas.pop();
+console.log(masyvas, last2);
+
+const last3 = masyvas.shift();
+console.log(masyvas, last3);
+
+const last4 = masyvas.unshift(0);
+console.log(masyvas, last4);
+
+masyvas.reverse();
+console.log(masyvas);
+
+const x = masyvas.slice(1, -1);
+console.log(x);
+
+console.log('--------------');
+console.log(masyvas);
+const y = masyvas.splice(2, 2, 'x', 'y', 'z');
+console.log(y, masyvas);
