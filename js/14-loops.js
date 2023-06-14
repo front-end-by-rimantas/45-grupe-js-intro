@@ -28,7 +28,7 @@ console.log('sum:', sum2);
 
 // WHILE
 console.log('\nWHILE ----------------------');
-const marks3 = [];
+const marks3 = [10, 2, 8, 4, 6];
 let sum3 = 0;
 let i3 = 0;
 
@@ -42,7 +42,7 @@ console.log('sum:', sum3);
 
 // DO-WHILE
 console.log('\nDO-WHILE ----------------------');
-const marks4 = [];
+const marks4 = [10, 2, 8, 4, 6];
 let sum4 = 0;
 let i4 = 0;
 
