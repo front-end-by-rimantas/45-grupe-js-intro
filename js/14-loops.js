@@ -1,6 +1,7 @@
 console.clear();
 
-/* for, for-of, while, do-while, for-in */
+/* array: for, for-of, while, do-while */
+/* object: for-in */
 
 // FOR
 console.log('\nFOR ----------------------');
@@ -53,3 +54,69 @@ do {
 } while (i4 < marks4.length)
 
 console.log('sum:', sum4);
+
+// FOR-IN
+console.log('\nFOR-IN ----------------------');
+const user = {
+    name: 'Jonas',
+    age: 99,
+    isMarried: true,
+    x: 'xXx',
+    address: 'Gatve, Miestas',
+};
+
+console.log('START');
+
+const userKeys = Object.keys(user);
+for (let i = 0; i < userKeys.length; i++) {
+    const key = userKeys[i];
+    console.log(key, ':', user[key]);
+}
+
+console.log('---------------------------------');
+
+for (const key in user) {
+    console.log(key, ':', user[key]);
+}
+
+console.clear();
+
+function arSuktiCikla(iteracija) {
+    return iteracija < 100;
+}
+
+let i = 10;
+for (; arSuktiCikla(i);) {
+    console.log(i);
+
+    i += 10;
+}
+
+console.clear();
+
+// Ciklas sukasi kol triju is eiles bitu suma yra didesne uz 1.
+
+function arSvieciaGirlianda(list, index) {
+    const arPaskutinisTrio = index < list.length - 2;
+    const suma = list[index] + list[index + 1] + list[index + 2];
+    const arGeraTrioSuma = suma > 1;
+    return arPaskutinisTrio && arGeraTrioSuma;
+}
+
+const bits = [1, 0, 1, 1, 0, 0, 1, 1, 1, 0];
+for (let i = 0; arSvieciaGirlianda(bits, i); i++) {
+    const trioSum = bits[i] + bits[i + 1] + bits[i + 2];
+    console.log(i, '-->', bits[i], bits[i + 1], bits[i + 2], '=', trioSum);
+}
+
+console.log('---------------');
+// Ciklas spausdina tik tas poras, kur bitu suma didesne uz 1.
+
+const bits2 = [1, 0, 1, 1, 0, 0, 1, 1, 1, 0];
+for (let i = 0; i < bits2.length - 2; i++) {
+    const trioSum = bits[i] + bits[i + 1] + bits[i + 2];
+    if (trioSum < 2) {
+        continue;
+    }
+    console.log(i, '-->', bits[i], bits[i + 1], bits[i + 2], '=', trioSum);
+}
