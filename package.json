@@ -9,6 +9,7 @@
         "biggestNumber": "nodemon ./mini/biggestNumber.js",
         "numberLength": "nodemon ./mini/numberLength.js",
         "multiply": "nodemon ./mini/multiply.js",
+        "ternary": "nodemon ./js/16-ternary.js",
         "destructuring": "nodemon ./js/15-destructuring.js",
         "loops": "nodemon ./js/14-loops.js",
         "arrow": "nodemon ./js/13-arrow.js",
